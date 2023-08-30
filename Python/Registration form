@@ -1,0 +1,26 @@
+from tkinter import*
+import openpyxl
+from openpyxl import workbook
+root=Tk()
+root.geometry("700X700")
+root.resizable(0,0)
+root.title("my first application")
+root.config(bg="green")
+def show():
+    x=a.get()
+lbl=Label(root,text="LOGIN FORM",font=("Ariel",20,'bold'),fg='white',bg="black")
+lbl.place(x=260,y=4)
+lbl=Label(root,text="USER NAME",font=("Ariel",20,'bold'),fg='black',bg="white")
+lbl.place(x=45,y=150)
+lbl=Label(root,text="PASSWORD",font=("Ariel",20,'bold'),fg='black',bg="white")
+lbl.place(x=45,y=300)
+a=StringVar()
+e1=Entry(root,font=('calibri',20),fg='black',bg='white',textvariable=a)
+e1.place(x=500,y=150,width=160,height=45)
+b=StringVar()
+e1=Entry(root,font=('calibri',20),fg='black',bg='white',textvariable=b)
+e1.place(x=500,y=300,width=160,height=45)
+b1=Button(root,font=("ariel",20),bg="grey",fg="white",text="Login",activeforeground="red",activebackground="green",command=show)
+b1.place(x=280,y=400,width=100,height=50)
+
+root.mainloop()

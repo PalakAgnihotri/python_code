@@ -1,0 +1,30 @@
+from tkinter import*
+from tkinter import ttk
+root=Tk()
+root.geometry("400x400")
+root.resizable(0,0)
+root.title("menu box")
+root.config(bg="black")
+dmenu=Menu(root)
+sub1=Menu(dmenu,tearoff=0)
+sub2=Menu(dmenu,tearoff=0)
+sub3=Menu(dmenu)
+dmenu.add_cascade(label="file",menu=sub1)
+sub1.add_command(label="Notebook")
+sub1.add_separator()
+sub1.add_command(label="open")
+sub1.add_command(label="save")
+dmenu.add_cascade(label="edit",menu=sub2)
+sub2.add_command(label="undo")
+sub2.add_command(label="redo")
+sub2.add_command(label="copy")
+sub2.add_command(label="paste")
+dmenu.add_cascade(label="view",menu=sub3)
+sub3.add_command(label="show")
+sub3.add_command(label="hide")
+
+root.config(menu=dmenu)
+
+
+
+root.mainloop()
